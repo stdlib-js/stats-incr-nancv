@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-04)
+## Unreleased (2026-09-27)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`d29a172`](https://github.com/stdlib-js/stdlib/commit/d29a1728b255293338ad56ed19b35e095621c79e) - **docs:** update descriptions [(#15593)](https://github.com/stdlib-js/stdlib/pull/15593) _(by Philipp Burckhardt)_
 -   [`833f951`](https://github.com/stdlib-js/stdlib/commit/833f951ec6b32b5f79bee6c7dcc7a1e90b06fd26) - **bench:** refactor to use string interpolation in `stats/incr/nancv` [(#14775)](https://github.com/stdlib-js/stdlib/pull/14775) _(by Aryan Sharma)_
 -   [`ade461e`](https://github.com/stdlib-js/stdlib/commit/ade461edb52841cfe934d6740bf14ecc5b368b34) - **feat:** add `stats/incr/nancv` [(#5949)](https://github.com/stdlib-js/stdlib/pull/5949) _(by Jalaj Kumar, Philipp Burckhardt)_
 
