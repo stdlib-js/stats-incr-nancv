@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,16 +16,25 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
 /**
-* Compute the coefficient of variation (CV) incrementally, ignoring `NaN` values.
+* If provided a value, the accumulator function returns an updated accumulated value. If not provided a value, the accumulator function returns the current accumulated value.
 *
-* @module @stdlib/stats-incr-nancv
+* @param x - value
+* @returns accumulated value or null
+*/
+type accumulator = ( x?: number ) => number | null;
+
+/**
+* Returns an accumulator function which incrementally computes the coefficient of variation (CV), ignoring `NaN` values.
+*
+* @param mean - known mean
+* @returns accumulator function
 *
 * @example
-* var incrnancv = require( '@stdlib/stats-incr-nancv' );
-*
 * var accumulator = incrnancv();
 *
 * var cv = accumulator();
@@ -34,21 +43,21 @@
 * cv = accumulator( 2.0 );
 * // returns 0.0
 *
-* cv = accumulator( NaN );
-* // returns 0.0
-*
 * cv = accumulator( 1.0 );
+* // returns ~0.47
+*
+* cv = accumulator( NaN );
 * // returns ~0.47
 *
 * cv = accumulator();
 * // returns ~0.47
+*
+* @example
+* var accumulator = incrnancv( 3.14 );
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function incrnancv( mean?: number ): accumulator;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = incrnancv;
